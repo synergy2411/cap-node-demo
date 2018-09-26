@@ -1,0 +1,26 @@
+{
+  "name": "cap-node-demo",
+  "version": "2.0.0",
+  "description": "My New Packages",
+  "main": "events.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synergy2411/cap-node-demo.git"
+  },
+  "author": "Sumit Khandelwal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synergy2411/cap-node-demo/issues"
+  },
+  "homepage": "https://github.com/synergy2411/cap-node-demo#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "gulp": "^1.2.1",
+    "morgan": "1.0.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
