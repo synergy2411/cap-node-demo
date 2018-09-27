@@ -24,6 +24,31 @@ app.post("/login", function(req, res){
     res.send("API HIT");
 })
 
+app.post("/find", function(req, res){
+    if(req.body){
+        var key = { "username" : req.body.username };
+        mongoUtil.findUser(key);
+    }
+    res.send("API HIT");
+})
+
+app.post("/delete", function(req, res){
+    if(req.body){
+        var key = { "username" : req.body.username };
+        mongoUtil.deleteUser(key);
+    }
+    res.send("API HIT");
+})
+
+app.post("/update", function(req, res){
+    if(req.body){
+        var key = { "username" : req.body.username };
+        mongoUtil.updateUser(key);
+    }
+    res.send("API HIT");
+})
+
+
 app.listen(3030, function(){
     console.log("Server is running...");
 })

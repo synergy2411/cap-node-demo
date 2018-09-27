@@ -19,3 +19,28 @@ module.exports.insertUser = function(user){
         console.log("Data Inserted");
     })
 }
+
+module.exports.findUser = function(key){
+    _db.collection("users").find(key).toArray(function(err, docs){
+        if(err) console.log(err);
+        console.log(docs);
+    })
+}
+
+module.exports.deleteUser = function(key){
+    _db.collection("users").remove(key, function(err, result){
+        if(err) console.log(err);
+        console.log("User Record Deleted");
+    })
+}
+
+module.exports.updateUser = function(key){
+    const collection = _db.collection('users');
+    collection.updateOne(key
+    , { $set: { password : "new-password" } }, function(err, result) {
+        if(err) console.log(err);
+    console.log("Updated the Record.");
+  }); 
+
+
+}
